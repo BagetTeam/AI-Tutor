@@ -1,0 +1,264 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh; /* Ensure full height */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Make it a circle */
+    margin-right: 10px;
+}
+
+.username {
+    font-size: 1rem;
+}
+
+main {
+    display: flex;
+    height: calc(100vh - 60px); /* Subtract navbar height */
+    background-color: #90EE90; /* Light green background */
+}
+
+.subjects {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align subjects list to the top */
+    align-items: flex-start; /* Align subjects list to the left */
+}
+
+.subjects h2 {
+    font-size: 2rem;
+    margin-bottom: 20px; /* Larger margin below the heading */
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Dark grey */
+}
+
+.subjectList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align subjects vertically to the left */
+    padding: 30px;
+}
+
+.subject {
+    padding: 13px;
+    margin-bottom: 30px; /* Larger margin around the buttons */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.8rem; /* Larger font size */
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* White text color */
+    background-color: #3498db; /* Blue background */
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.subject .fa {
+    margin-right: 10px; /* Add spacing between icon and text */
+}
+
+.subject.science {
+    background-color: #2ecc71; /* Green background */
+}
+
+.subject.french {
+    background-color: #e74c3c; /* Red background */
+}
+
+.subject.english {
+    background-color: #f39c12; /* Orange background */
+}
+
+.subject:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+.subject span {
+    margin-left: 10px;
+}
+
+.content {
+    flex: 2;
+    padding: 20px;
+}
+
+.speech-bubble {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    color: navy;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 200px;
+    text-align: center;
+}
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    border: 15px solid transparent;
+    border-top-color: white;
+    border-bottom: 0;
+    border-right: 0;
+    /* margin-left: -15px; */
+}
+
+.tutorGif {
+    position: absolute;
+    right: 100px;
+    bottom: 100px;
+}
+
+.tutorGif.img {
+    height: 1000px;
+}
+
+.tutorGif.speech-bubble {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+}
+
+.landing_page {
+    position: fixed;
+    display: inline-block;  
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgb(156, 255, 255);
+    transition: 400ms;
+}
+
+.landing_page.main {
+  display: inline-block;  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;    
+  width: 600px;
+}
+
+body {
+    height: 100%;
+}
+
+
+/* 
+
+.next_page {
+    position: fixed;
+    display: inline-block;  
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgb(156, 255, 255);
+    transition: 400ms;
+}
+
+.next_page.main {
+    display: flex;
+    height: calc(100vh - 60px); 
+    background-color: #90EE90; 
+}
+
+.topics {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+}
+
+.topics h2 {
+    font-size: 2rem;
+    margin-bottom: 20px; 
+    font-family: 'Arial', sans-serif;
+    color: #333; 
+}
+
+.topicList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding: 30px;
+}
+
+.topic {
+    padding: 13px;
+    margin-bottom: 30px; 
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.8rem; 
+    font-family: 'Arial', sans-serif;
+    color: #fff; 
+    background-color: #3498db; 
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.topic .fa {
+    margin-right: 10px; 
+}
+
+.topic.cal1 {
+    background-color: #2ecc71; 
+}
+
+.topic.cal2 {
+    background-color: #e74c3c; 
+}
+
+.topic.cal3 {
+    background-color: #f39c12; 
+}
+
+.topic:hover {
+    background-color: #2980b9; 
+}
+
+.topic span {
+    margin-left: 10px;
+} */
