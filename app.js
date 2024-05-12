@@ -53,7 +53,7 @@ subjects.forEach(element => {
 const textarea = document.querySelector('.plotSpace textarea')
 const output = document.querySelector(".plotSpace p");
 let subject = "math"
-let context = "Your name is bob, you are a genius math tutor. Your task is to help students with their " + subject + " homework."
+let context = "Your name is bob, you are a genius " + subject + " tutor. Your task is to help students with their " + subject + " homework."
 textarea.addEventListener('keypress', async function (e) {
     if (e.key === 'Enter') {
         e.preventDefault();

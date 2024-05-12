@@ -17,15 +17,14 @@ main {
   margin: 0;
   overflow: hidden;
   font-family: Arial, sans-serif;
-  background-color: #c2d8fc;
+  background-color: #8ba5cf;
   /* Background color for the entire page */
 }
 
 /* Split the screen in half */
-.algebraSpace,
-.plotSpace {
+.algebraSpace {
   /* flex: 3; */
-  width: 600px;
+  width: 350px;
   height: 100%;
   overflow: hidden;
   display: flex;
@@ -35,9 +34,19 @@ main {
 }
 
 .plotSpace {
+  /* flex: 3; */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  /* Add a subtle border */
   flex: auto;
   box-sizing: border-box;
   align-items: center;
+  padding: 10px;
+  color: white;
 }
 
 /* Divide subjectList into two sections */
@@ -86,7 +95,7 @@ input[type="button"] {
 }
 
 input[type="button"]:hover {
-  background-color: #005bbf;
+  background-color: #0a4b91;
   /* Hover color */
 }
 
@@ -139,10 +148,11 @@ input[type="button"]:hover {
 }
 
 .plotSpace textarea {
-  position:relative;
+  position: relative;
   bottom: 0;
-  width: 400px;
+  width: 75vw;
   margin: 10;
+  border-radius: 10px;
 }
 
 .textarea {
@@ -151,21 +161,27 @@ input[type="button"]:hover {
   resize: vertical;
   box-sizing: border-box;
   resize: none;
-  color: #005bbf;
+  color: #064384;
+  font-size: 20px;
 }
 
 .subject {
   padding: 13px;
-  margin-bottom: 30px; /* Larger margin around the buttons */
+  margin-bottom: 30px;
+  /* Larger margin around the buttons */
   border: none;
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 10px;
+  /* Rounded corners */
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 1.8rem; /* Larger font size */
-  font-family: 'Arial', sans-serif;
-  color: #fff; /* White text color */
-  background-color: #3498db; /* Blue background */
-  display: flex;
+  font-size: 1.8rem;
+  /* Larger font size */
+  font-family: cursive;
+  color: #fff;
+  /* White text color */
+  background-color: rgb(47, 42, 138);
+  /* Blue background */
   align-items: center;
   width: 200px;
+  text-align: center;
 }
