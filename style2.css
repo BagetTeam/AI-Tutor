@@ -1,12 +1,12 @@
 body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 h1 {
-    margin: 10px;
+  margin: 10px;
 }
 
 /* Make the main element cover the entire viewport */
@@ -17,7 +17,8 @@ main {
   margin: 0;
   overflow: hidden;
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5; /* Background color for the entire page */
+  background-color: #c2d8fc;
+  /* Background color for the entire page */
 }
 
 /* Split the screen in half */
@@ -29,12 +30,14 @@ main {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  border: 1px solid #ddd; /* Add a subtle border */
+  border: 1px solid #ddd;
+  /* Add a subtle border */
 }
 
 .plotSpace {
-    flex: 1;
-    box-sizing: border-box;
+  flex: auto;
+  box-sizing: border-box;
+  align-items: center;
 }
 
 /* Divide subjectList into two sections */
@@ -46,54 +49,66 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   flex-grow: 0;
-  background-color: #ffffff; /* White background */
+  background-color: #ffffff;
+  /* White background */
 }
 
 /* Style for mathInputDiv elements */
 label {
   font-weight: bold;
   margin-bottom: 10px;
-  color: #333; /* Dark text color */
+  color: #333;
+  /* Dark text color */
 }
 
 input[type="text"] {
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ddd; /* Add a border to input fields */
-  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ddd;
+  /* Add a border to input fields */
+  border-radius: 5px;
+  /* Rounded corners */
   font-size: 16px;
 }
 
 input[type="button"] {
-  padding: 10px 20px; /* Adjust button size */
-  background-color: #007acc; /* Button background color */
-  color: #fff; /* Button text color */
+  padding: 10px 20px;
+  /* Adjust button size */
+  background-color: #007acc;
+  /* Button background color */
+  color: #fff;
+  /* Button text color */
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s; /* Add a subtle hover effect */
+  transition: background-color 0.3s;
+  /* Add a subtle hover effect */
 }
 
 input[type="button"]:hover {
-  background-color: #005bbf; /* Hover color */
+  background-color: #005bbf;
+  /* Hover color */
 }
 
 /* Style for subjectList with scrollbar */
 .subjectList {
   box-sizing: border-box;
   padding: 20px;
-  overflow-y: auto; /* Vertical scrollbar */
+  overflow-y: auto;
+  /* Vertical scrollbar */
   flex-grow: 1;
-  background-color: #f9f9f9; /* Light gray background */
-  border-top: 1px solid #ddd; /* Add a subtle border at the top */
+  background-color: #f9f9f9;
+  /* Light gray background */
+  border-top: 1px solid #ddd;
+  /* Add a subtle border at the top */
 }
 
 .subjectList {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .Subject .categories {
-    display: none;
+  display: none;
 }
 
 /* Style for mathSteps as vertical list of rectangles */
@@ -102,7 +117,8 @@ input[type="button"]:hover {
   height: 60px;
   background-color: #f0f0f0;
   margin-bottom: 10px;
-  border: 1px solid #ccc; /* Add a border to each step */
+  border: 1px solid #ccc;
+  /* Add a border to each step */
   border-radius: 5px;
 }
 
@@ -116,16 +132,40 @@ input[type="button"]:hover {
 }
 
 .prettyInputDisplay {
-    height: 90px;
-    background-color: #ccc;
-    margin-top: 10px;
-    border-radius: 10px;
+  height: 90px;
+  background-color: #ccc;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 .plotSpace textarea {
-    position: absolute;
-    bottom: 0;
-    width: 300px;
-    margin: 0;
-    padding: 0;
+  position:relative;
+  bottom: 0;
+  width: 400px;
+  margin: 10;
+}
+
+.textarea {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+  box-sizing: border-box;
+  resize: none;
+  color: #005bbf;
+}
+
+.subject {
+  padding: 13px;
+  margin-bottom: 30px; /* Larger margin around the buttons */
+  border: none;
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.8rem; /* Larger font size */
+  font-family: 'Arial', sans-serif;
+  color: #fff; /* White text color */
+  background-color: #3498db; /* Blue background */
+  display: flex;
+  align-items: center;
+  width: 200px;
 }
