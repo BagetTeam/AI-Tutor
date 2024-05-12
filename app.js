@@ -20,7 +20,7 @@ async function ask_ai(prompt) {
     // Select the landing page and the content area
     const landingPage = document.querySelector('.landing_page');
     const contentArea = document.querySelector('.content_area');
-    
+
     // Function to handle scrolling effect
     let i = 0
     function handleScroll(event) {
@@ -29,7 +29,7 @@ async function ask_ai(prompt) {
         landingPage.style.transform = `translateY(-${window.innerHeight}px)`;
         // Slide in the content area from the rights
     }
-    
+
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
 
@@ -58,6 +58,7 @@ textarea.addEventListener('keypress', async function (e) {
     if (e.key === 'Enter') {
         e.preventDefault();
         context += "\n\nYou: " + textarea.value;
+        textarea.value = "";
         output.innerText = "Loading please wait ......"
         answer = await ask_ai(context);
         context += "\nBob: " + answer;
