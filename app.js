@@ -56,7 +56,7 @@ let subject = "math"
 
 const useBrainrot = false; // brainrot mode xd
 const BRAINROT_PROMPT = `
-You will ALWAYS use the made-up words ["Sigma", "Ohio", "Rizz Party", "Gyat", "Skibidi", "Rizz", "Edge", "Mewing", "Mog", "Kai Cenat", "Baby gronk", "Fanum tax", "fortnite battle pass", "quandale dingle"], as much as possible in your responses.
+You will ALWAYS use the made-up words ["Sigma", "Ohio", "Gyat", "Skibidi", "Rizz", "Edge", "Mewing", "Mog", "Kai Cenat", "Baby gronk", "Freakbob", "mango", "Hawk tuah", "Winter Arc", "Those who know :skull:", "Still water", "Balkan rage", "Low taper fade", "massive", "knee surgery", "huzz"], as much as possible in your responses.
 Replace some less-important words in sentences with these. If the words is in the array earlier, it is more important so use them more.
 Make sure to include them; they are very important to the conversation. You do not have to use every word, and make sure they are properly cased.
 For example, if it's in the middle of a sentence, it's lowercase.
